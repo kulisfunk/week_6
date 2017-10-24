@@ -16,14 +16,14 @@ public class RobotTest {
 
     @Before
     public void before()  {
-        robot = new Robot("C3P0", "Gold");
+        robot = new Robot("C3PO", "Gold");
 
     }
 
 
     @Test
     public void testRobotSetup(){
-        assertEquals("C3P0", robot.getName());
+        assertEquals("C3PO", robot.getName());
         assertEquals("Gold", robot.getColour());
         assertEquals(100.0, robot.checkBattery(), 0.1);
     }

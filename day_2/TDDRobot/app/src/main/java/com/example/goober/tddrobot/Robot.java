@@ -27,28 +27,28 @@ public class Robot {
         return battery;
     }
 
-    public void setBattery(Double battery) {
-        this.battery = battery;
-    }
-
     public String makeDrink(String drink){
-        this.battery -= 10;
+        reduceBattery(10.0);
         return ("I am making " + drink);
     }
 
     public String washingDishes(){
-        this.battery -=30;
+        reduceBattery(30.0);
         return "I am washing the dishes";
     }
 
     public String doDusting(){
-        this.battery -= 20;
+        reduceBattery(20.0);
         return "I am dusting";
     }
 
     public Double rechargeBattery(){
         this.battery = 100.0;
         return this.battery;
+    }
+
+    public Double reduceBattery(Double amount){ //a method to reduce battery power instead of repeating code
+        return this.battery -= amount;
     }
 
 

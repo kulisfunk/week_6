@@ -8,8 +8,10 @@ public class Director extends Manager {
 
     private double budget;
 
-    public Director(int id, String name, String socialSecurityNumber, double salary, String deptName) {
+    public Director(int id, String name, String socialSecurityNumber, double salary, String deptName, double budget) {
         super(id, name, socialSecurityNumber, salary, deptName);
+
+        this.budget = budget;
 
     }
 

@@ -6,16 +6,16 @@ package example.codeclan.com.employeestartpoint;
 
 public class Admin extends Employee{
 
-    int id;
-    String name;
-    String ssn;
-    double salary;
+//    int id;
+//    String name;
+//    String ssn;
+//    double salary; not needed
 
     public Admin(int id, String name, String socialSecurityNumber, double salary) {
         super(id, name, socialSecurityNumber, salary);
-        this.id = id;
-        this.name = name;
-        this.ssn = socialSecurityNumber;
-        this.salary = salary;
+//        this.id = id;
+//        this.name = name;
+//        this.ssn = socialSecurityNumber;
+//        this.salary = salary; not needed
     }
 }

@@ -27,7 +27,7 @@ public class Employee {
     }
 
     public void setName(String name) {
-        if (!name.isEmpty()) {
+        if (name != null && name != "") {
             this.name = name;
         }
     }

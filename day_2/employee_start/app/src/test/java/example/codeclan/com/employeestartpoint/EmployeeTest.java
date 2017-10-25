@@ -25,7 +25,7 @@ public class EmployeeTest {
         manager = new Manager(1, "Martin", "011904A", 50000.00, "KPI Test" );
         engineer = new Engineer(1, "Martin", "011904A", 40000.00 );
         admin = new Admin(1, "Martin", "011904A", 20000.00 );
-        director = new Director(1, "Martin", "011904A", 90000.00, "Engineering Wing" );
+        director = new Director(1, "Martin", "011904A", 90000.00, "Engineering Wing", 500000.00 );
 
     }
 
@@ -68,8 +68,15 @@ public class EmployeeTest {
     }
 
     @Test
-    public void notNullSetManagerName() {
+    public void notEmptySetManagerName() {
         manager.setName("");
+        assertEquals("Martin", manager.getName());
+    }
+
+    @Test
+    public void notNullSetManagerName() {
+        String newName = null;
+        manager.setName(newName);
         assertEquals("Martin", manager.getName());
     }
 

@@ -6,18 +6,15 @@ package example.codeclan.com.employeestartpoint;
 
 public class Manager extends Employee{
 
-    int id;
-    String name;
-    String ssn;
-    double salary;
-    String deptName;
+//     not needed as we defined them in Employee
+    private String deptName; //set to private
 
     public Manager(int id, String name, String socialSecurityNumber, double salary, String deptName) {
         super(id, name, socialSecurityNumber, salary);
-        this.id = id;
-        this.name = name;
-        this.ssn = socialSecurityNumber;
-        this.salary = salary;
+//        this.id = id;
+//        this.name = name;
+//        this.ssn = socialSecurityNumber;
+//        this.salary = salary; not needed as Employee has declared
         this.deptName = deptName;
     }
 

@@ -22,6 +22,10 @@ public class Wizard {
         this.ride = ride;
     }
 
+    public void setShield(Protector shield){
+        this.shield = shield;
+    }
+
     public String getName(){
         return this.name;
     }

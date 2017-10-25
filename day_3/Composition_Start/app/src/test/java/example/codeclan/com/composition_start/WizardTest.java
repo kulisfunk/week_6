@@ -86,4 +86,10 @@ public class WizardTest {
         Ogre ogre = (Ogre) wizard2.getShield();
         assertEquals(wizard2.protect(), 70);
     }
+
+    @Test
+    public void canSetShield(){
+        wizard.setShield(ogre);
+        assertEquals(wizard.protect(), 70);
+    }
 }

@@ -14,6 +14,7 @@ public class Jeep extends Vehicle implements Attack, Move {
     String type;
     int ram;
     int shoot;
+    int newHealth;
 
 
 
@@ -22,8 +23,11 @@ public class Jeep extends Vehicle implements Attack, Move {
 
         this.ram = ram;
         this.shoot = shoot;
+        this.health = health;
+        this.type = type;
 
     }
+
 
     public int attack(String attackMethod) {
 
@@ -34,9 +38,14 @@ public class Jeep extends Vehicle implements Attack, Move {
         }
     }
 
-    public String move() {return this.type + " is moving in for ";}
-
-    public void underAttack(int damage) {
-        this.health -= damage;
+    public String move() {
+        return this.type + " is moving in for the kill on Mozilla!";
     }
+
+    public void underAttack(int damage){
+        newHealth = (this.health - damage);
+        super.setHealth(newHealth);
+    }
+
+
 }

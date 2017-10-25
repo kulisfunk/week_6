@@ -70,44 +70,40 @@ public class TestKaijuAttack {
         assertEquals( 100, monster1.attack("eat"));
         assertEquals( 90, monster2.attack("eat"));
     }
-//
-//    @Test
-//    public void canFlyBroomstick(){
-//        assertEquals(wizard2.fly(), "mounting broom, running, skipping, flying!");
-//    }
-//
-//    @Test
-//    public void canFlyDragon(){
-//        assertEquals(wizard.fly(), "Standing up tall, beating wings, lift off!");
-//    }
-//
-//    @Test
-//    public void canFlyMagicCarpet(){
-//        assertEquals(wizard3.fly(), "Hovering up, straightening out, flying off!");
-//    }
-//
-//    @Test
-//    public void canSetRide(){
-//        wizard.setRide(broomstick);
-//        assertEquals(wizard.fly(), "mounting broom, running, skipping, flying!");
-//    }
-//
-//    @Test
-//    public void hasDragonProtection(){
-//        Dragon dragon = (Dragon) wizard.getShield();
-//        assertEquals(wizard.protect(), 50);
-//
-//    }
-//
-//    @Test
-//    public void hasOgreProtection(){
-//        Ogre ogre = (Ogre) wizard2.getShield();
-//        assertEquals(wizard2.protect(), 70);
-//    }
-//
-//    @Test
-//    public void canSetShield(){
-//        wizard.setShield(ogre);
-//        assertEquals(wizard.protect(), 70);
-//    }
+
+    @Test
+    public void canGetHealth(){
+        assertEquals( 800, monster1.getHealth());
+        assertEquals( 600, monster2.getHealth());
+        assertEquals( 900, tank1.getHealth());
+        assertEquals( 500, jeep1.getHealth());
+    }
+
+    @Test
+    public void canTakeDamage(){
+        monster1.underAttack(tank1.attack("ram"));
+        monster2.underAttack(tank1.attack("ram"));
+        tank1.underAttack(monster1.attack("swipe"));
+        jeep1.underAttack(monster1.attack("swipe"));
+        assertEquals( 720, monster1.getHealth());
+        assertEquals( 520, monster2.getHealth());
+        assertEquals( 830, tank1.getHealth());
+        assertEquals( 430, jeep1.getHealth());
+    }
+
+    @Test
+    public void canRoar(){
+        assertEquals(monster1.roar(), "Roaaaarrrrr!!!!!");
+        assertEquals(monster2.roar(), "Wheeeaaaaahhh!!!");
+    }
+
+    @Test
+    public void canMove(){
+        assertEquals(monster1.move(), "Gordo is Moving forward to Tank");
+        assertEquals(monster2.move(), "Mordo is trying to flank the Jeep!");
+        assertEquals(tank1.move(), "Heavy Tank is moving behind a building");
+        assertEquals(jeep1.move(), "Light Jeep is moving in for the kill on Mozilla!");
+    }
+
+    
 }

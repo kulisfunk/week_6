@@ -11,17 +11,21 @@ public class Tank extends Vehicle implements Attack, Move {
 
     int health;
     int damage;
-    int type;
+    String type;
     int ram;
     int shoot;
-    String attckMethod;
+    int newHealth;
+    String attackMethod;
 
     public Tank(String type, int health, int ram, int shoot) {
         super(type, health);
 
         this.ram = ram;
         this.shoot = shoot;
+        this.health = health;
+        this.type = type;
     }
+
 
     public int attack(String attackMethod) {
 
@@ -35,7 +39,8 @@ public class Tank extends Vehicle implements Attack, Move {
     public String move() {return this.type + " is moving behind a building";}
 
     public void underAttack(int damage){
-        this.health -= damage;
+        newHealth = (this.health - damage);
+        super.setHealth(newHealth);
     }
 
 }

@@ -14,12 +14,15 @@ public class Mozilla extends Kaiju implements Move, Attack {
     String name;
     int swipe;
     int eat;
+    int newHealth;
 
     public Mozilla(String name, int swipeDamage, int eatDamage, int health) {
         super(name, health);
 
         this.swipe = swipeDamage;
         this.eat = eatDamage;
+        this.health = health;
+        this.name = name;
 
     }
 
@@ -40,6 +43,8 @@ public class Mozilla extends Kaiju implements Move, Attack {
     }
 
     public void underAttack(int damage){
-        this.health -= damage;
+        newHealth = (this.health - damage);
+        super.setHealth(newHealth);
     }
+
 }

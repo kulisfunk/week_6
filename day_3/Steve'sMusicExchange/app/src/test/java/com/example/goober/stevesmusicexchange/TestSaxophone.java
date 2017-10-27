@@ -17,7 +17,7 @@ public class TestSaxophone {
     @Before
     public void setUp() throws Exception {
 
-        sax = new Saxophone(Colour.GOLD, Material.BRASS, Family.WOODWIND, "Barotone");
+        sax = new Saxophone(Colour.GOLD, Material.BRASS, Family.WOODWIND, "Barotone", 100, 300);
 
     }
 
@@ -44,5 +44,10 @@ public class TestSaxophone {
     @Test
     public void isPlayable(){
         assertEquals("fvoo fvoo fvoooooo", sax.instrumentPlay());
+    }
+
+    @Test
+    public void hasProfit(){
+        assertEquals(200, sax.calculateMarkup());
     }
 }

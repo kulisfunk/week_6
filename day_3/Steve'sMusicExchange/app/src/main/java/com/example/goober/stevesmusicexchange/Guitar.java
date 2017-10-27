@@ -4,10 +4,19 @@ package com.example.goober.stevesmusicexchange;
  * Created by goober on 27/10/2017.
  */
 
-public class Guitar extends Instrument implements Playable {
+public class Guitar extends Instrument implements Playable, Sellable {
 
-    public Guitar(Colour colour, Material material, Family family, String type) {
+    int buyPrice;
+    int sellPrice;
+    int numStrings;
+
+
+    public Guitar(Colour colour, Material material, Family family, String type, int buyPrice, int sellPrice, int numStrings) {
         super(colour, material, family, type);
+
+        this.buyPrice = buyPrice;
+        this.sellPrice = sellPrice;
+        this.numStrings = numStrings;
     }
 
 
@@ -15,5 +24,28 @@ public class Guitar extends Instrument implements Playable {
         return "Wacka Wacka Waaaaaa";
     }
 
+    public int calculateMarkup() {
+        return (sellPrice - buyPrice);
+    }
+
+    public int getBuyPrice() {
+        return buyPrice;
+    }
+
+    public void setBuyPrice(int buyPrice) {
+        this.buyPrice = buyPrice;
+    }
+
+    public int getSellPrice() {
+        return sellPrice;
+    }
+
+    public void setSellPrice(int sellPrice) {
+        this.sellPrice = sellPrice;
+    }
+
+    public int getNumStrings() {
+        return numStrings;
+    }
 
 }

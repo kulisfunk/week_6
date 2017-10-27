@@ -17,7 +17,7 @@ public class TestGuitar {
     @Before
     public void setUp() throws Exception {
 
-        guitar = new Guitar(Colour.WHITE, Material.ALDER, Family.STRINGS, "Fender Stratocaster");
+        guitar = new Guitar(Colour.WHITE, Material.ALDER, Family.STRINGS, "Fender Stratocaster", 400, 800, 6);
 
     }
 
@@ -44,5 +44,15 @@ public class TestGuitar {
     @Test
     public void isPlayable(){
         assertEquals("Wacka Wacka Waaaaaa", guitar.instrumentPlay());
+    }
+
+    @Test
+    public void hasNumStrings(){
+        assertEquals(6, guitar.getNumStrings());
+    }
+
+    @Test
+    public void hasProfit(){
+        assertEquals(400, guitar.calculateMarkup());
     }
 }

@@ -6,5 +6,7 @@ package com.example.goober.stevesmusicexchange;
 
 public interface Sellable {
 
+    public int calculateMarkup();
+
 
 }

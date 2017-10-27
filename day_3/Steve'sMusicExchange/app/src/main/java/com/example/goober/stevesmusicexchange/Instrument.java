@@ -4,12 +4,12 @@ package com.example.goober.stevesmusicexchange;
  * Created by goober on 27/10/2017.
  */
 
-public class Instrument {
+public abstract class Instrument {
 
-    Colour colour;
-    Material material;
-    Family family;
-    String type;
+    private Colour colour;
+    private Material material;
+    private Family family;
+    private String type;
 
     public Instrument(Colour colour, Material material, Family family, String type) {
         this.colour = colour;

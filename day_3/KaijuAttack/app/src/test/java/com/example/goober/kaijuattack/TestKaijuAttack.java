@@ -105,5 +105,5 @@ public class TestKaijuAttack {
         assertEquals(jeep1.move(), "Light Jeep is moving in for the kill on Mozilla!");
     }
 
-    
+
 }

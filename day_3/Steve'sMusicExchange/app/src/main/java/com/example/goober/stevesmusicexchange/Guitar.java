@@ -28,22 +28,6 @@ public class Guitar extends Instrument implements Playable, Sellable {
         return (sellPrice - buyPrice);
     }
 
-    public int getBuyPrice() {
-        return buyPrice;
-    }
-
-    public void setBuyPrice(int buyPrice) {
-        this.buyPrice = buyPrice;
-    }
-
-    public int getSellPrice() {
-        return sellPrice;
-    }
-
-    public void setSellPrice(int sellPrice) {
-        this.sellPrice = sellPrice;
-    }
-
     public int getNumStrings() {
         return numStrings;
     }

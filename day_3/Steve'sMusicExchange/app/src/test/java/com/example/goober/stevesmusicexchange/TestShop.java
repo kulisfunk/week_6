@@ -17,6 +17,7 @@ public class TestShop {
     Microphone mic;
     GuitarStrings guitarStrings;
     Guitar guitar;
+    Violin violin;
 
 
 
@@ -28,6 +29,7 @@ public class TestShop {
         mic = new Microphone("Shure", "KSM8", 200, 480);
         guitarStrings = new GuitarStrings("Fender Bullets", 3, 6);
         guitar = new Guitar(Colour.WHITE, Material.ALDER, Family.STRINGS, "Fender Stratocaster", 400, 800, 6);
+        violin = new Violin(Colour.BROWN, Material.SPRUCE, Family.STRINGS, "Stradivarius");
 
     }
 
@@ -55,5 +57,12 @@ public class TestShop {
         assertEquals(4, shop.stock.size());
         assertEquals( 623, shop.getProjectedProfit());
     }
+
+//    @Test
+//    public void notAddNonSellable(){
+//        shop.addStock(sax);
+//        shop.addStock(violin);
+//        assertEquals(1, shop.stock.size());
+//    }
 
 }
